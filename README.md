@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Job Portal UI (React.js)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern Job Portal user interface built with **React.js**, styled using **CSS** and **Bootstrap**, and enhanced with **JavaScript logic**.  
+This application allows users to **fetch all jobs**, **create new job postings**, and **manage job contacts** seamlessly.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
+- **Job Listings**: Fetch and display all available jobs.
+- **Create Job**: Add new job postings with relevant details.
+- **Contacts Management**: Create and manage job-related contacts.
+- **Responsive UI**: Built with Bootstrap grid system and custom CSS.
+- **Modern Stack**: React.js + Axios + Material UI + Bootstrap.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Tech Stack
+- **Frontend**: React.js (Hooks, Functional Components)
+- **Styling**: CSS, Bootstrap (`bootstrap/dist/css/bootstrap.min.css`)
+- **UI Library**: Material UI (`@mui/material`, `@mui/icons-material`)
+- **HTTP Client**: Axios
+- **JavaScript**: ES6+ features integrated with React
+- **Tooling**: npm, VS Code, json-server
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📂 Project Structure
+```
+jobportal-react-1/
+  ├── public/
+  ├── src/
+  │    ├── components/   # Reusable UI components
+  │    ├── pages/        # Job listing, create job, contacts
+  │    ├── styles/       # Custom CSS files
+  │    ├── App.js        # Main app entry
+  │    └── index.js      # React DOM render
+  ├── db.json            # Mock backend data for json-server
+  ├── package.json
+  └── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚡ Getting Started
 
-### `npm run build`
+### Clone the Repository
+```bash
+git clone https://github.com/sugganabalaji/jobportal-react-1.git
+cd jobportal-react-1
+```
+## Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Create a new React app (already scaffolded in repo, but for reference)
+npx create-react-app jobportal-react-1
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Navigate into the project
+cd jobportal-react-1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Start the React development server
+npm start
 
-### `npm run eject`
+## Backend (Mock API with json-server)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Install json-server globally
+npm install -g json-server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Run json-server with db.json on port 8000
+json-server --watch db.json --port 8000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Final Steps
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 6. Install dependencies (if not already installed)
+npm install
 
-## Learn More
+### 7. Start the React app again
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 Access the Application
+Once the server starts, open your browser and go to:
+#### 👉 http://localhost:3000/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Mock backend runs at:
+#### 👉 http://localhost:8000/posts
 
-### Code Splitting
+## 🔗 API Integration
+This UI is designed to connect with a backend (e.g., Spring Boot REST API or json-server).
+Update API endpoints in your Axios service files
+```Javascript
+import axios from "axios";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+const API = axios.create({ baseURL: "http://localhost:8000" });
 
-### Analyzing the Bundle Size
+export const fetchJobs = () => API.get("/jobs");
+export const createJob = (jobData) => API.post("/jobs", jobData);
+export const createContact = (contactData) => API.post("/contacts", contactData);
+```
+## 👨‍💻 Author
+Balaji Suggana
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Senior Software Engineer | Modernizing Java/Spring/Maven portfolio with recruiter‑ready projects
+```
+This README now includes:  
+- ✅ Your **GitHub clone URL** ('https://github.com/sugganabalaji/jobportal-react-1.git')  
+- ✅ Full setup steps ('npx create-react-app', 'json-server', 'npm install', 'npm start')  
+- ✅ Access instructions for **http://localhost:3000** and **http://localhost:8000**  
+```
