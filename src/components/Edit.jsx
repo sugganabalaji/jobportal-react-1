@@ -20,7 +20,7 @@ const Edit = () => {
 
   useEffect(() => {
     const fetchInitialPosts = async (id) => {  
-      const response = await axios.get(`http://localhost:8080/jobPost/${id}`);
+      const response = await axios.get('http://localhost:8080/jobPost/${id}');
       console.log(response.data);
       setForm(response.data);
     };
@@ -30,13 +30,14 @@ const Edit = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios     
-      .post("http://localhost:8080/jobPost",form)
+      .put("http://localhost:8080/jobPost",form)
       .then((resp) => {
         console.log(resp.data);
       })
       .catch((error) => {
         console.log(error);
       });
+      window.location.reload();
   };
 
   const handleChange = (e) => {
@@ -59,6 +60,9 @@ const Edit = () => {
     {
       name: "Rust",
     },
+    {
+      name: "IOS",
+    }
   ];
 
   return (

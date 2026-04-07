@@ -20,7 +20,7 @@ const handleEdit = (id) => {
 
     useEffect(() => {
         const fetchInitialPosts = async () => {
-            const response = await axios.get(`http://localhost:8000/posts`);
+            const response = await axios.get('http://localhost:8080/jobPosts');
             setPost(response.data);
         }
          fetchInitialPosts();
@@ -28,7 +28,7 @@ const handleEdit = (id) => {
 
       const handleDelete = (id) => {
         async function deletePost() {
-          await axios.delete(`http://localhost:8080/jobPost/${id}`);
+          await axios.delete('http://localhost:8080/jobPost/${id}');
           console.log("Delete")
       }
       deletePost();
