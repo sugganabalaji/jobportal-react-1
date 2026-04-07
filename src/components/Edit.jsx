@@ -20,7 +20,7 @@ const Edit = () => {
 
   useEffect(() => {
     const fetchInitialPosts = async (id) => {  
-      const response = await axios.get('http://localhost:8080/jobPost/${id}');
+      const response = await axios.get(`http://localhost:8080/jobPost/${id}`);
       console.log(response.data);
       setForm(response.data);
     };

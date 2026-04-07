@@ -20,9 +20,9 @@ const Search = () => {
     const [post, setPost] = useState(null);
     const navigate = useNavigate();
 
-const handleEdit = (id) => {
-  navigate("/edit",{state:{id}});
-}
+    const handleEdit = (id) => {
+      navigate("/edit",{state:{id}});
+    }
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -39,11 +39,12 @@ const handleEdit = (id) => {
       }, [query]);
 
       const handleDelete = (id) => {
+        console.log(id);
         async function deletePost() {
-          await axios.delete('http://localhost:8080/jobPost/${id}');
-      }
-      deletePost();
-      window.location.reload();
+          await axios.delete(`http://localhost:8080/jobPost/${id}`);
+        }
+        deletePost();
+        window.location.reload();
       }
 
   return (

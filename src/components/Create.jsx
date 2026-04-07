@@ -46,6 +46,7 @@ const Create = () => {
       .catch((error) => {
         console.log(error);
       });
+      window.location.reload();
   };
 
   const { postId, postProfile, reqExperience, postDesc } = form;

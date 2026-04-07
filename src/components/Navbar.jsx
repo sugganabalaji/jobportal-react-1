@@ -17,7 +17,7 @@ const Navbar = () => {
           <AppBar position="static" style={{ background: '#ADD8E6' }}>
             <Toolbar variant="dense">
               <Typography variant="h4" align='Left' component="div" sx={{ flexGrow: 1, fontFamily:"revert", fontSize:"500", color:"black" }}>
-                Job Portal
+                Balaji Job Portal
               </Typography>
 
               <Box sx={{ m: 0.5, mx: 'auto', width: 80 }}>
