@@ -92,10 +92,24 @@ export const fetchJobs = () => API.get("/jobs");
 export const createJob = (jobData) => API.post("/jobs", jobData);
 export const createContact = (contactData) => API.post("/contacts", contactData);
 ```
+### Spring Boot Rest API also needs to up and run in your locally.
+- Project `spring-boot-rest` is Backend integration project for this application.
+- Used `Maven`, `Spring Boot`, `Spring Data JPA` and `PostGreSQL`.
+- Git Repo link provided below
+```bash
+  https://github.com/sugganabalaji/spring-boot-rest.git
+```
+- URL will look like `http://localhost:8080/`
+- PostGreSQL install in your local
+- Create a schema as `Dev`
+- Execute `GET Api - http://localhost:8080/loadData` from Postman or browser, to load sample data to PostGre DB.
+- In PostGreSQL Table `JobPost` Automatically created
+- Used Intellij IDEA to build and run the Application
+  
 ## 👨‍💻 Author
 Balaji Suggana
 
-Senior Software Engineer | Modernizing Java/Spring/Maven portfolio with recruiter‑ready projects
+Senior Software Engineer | Modernizing Java/Spring/Maven portfolio ready projects
 ```
 This README now includes:  
 - ✅ Your **GitHub clone URL** ('https://github.com/sugganabalaji/jobportal-react-1.git')  
